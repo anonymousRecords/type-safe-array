@@ -1,5 +1,6 @@
 {
   "name": "type-safe-array",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
@@ -7,10 +8,15 @@
     "build": "turbo run build",
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint:fix",
-    "dev:docs": "turbo run dev --filter=docs",
-    "build:docs": "turbo run build --filter=docs",
-    "start:docs": "turbo run start --filter=docs",
-    "lint:docs": "turbo run lint --filter=docs"
+    "dev:docs": "pnpm --filter docs run dev",
+    "build:docs": "pnpm --filter docs run build",
+    "start:docs": "pnpm --filter docs run start",
+    "lint:docs": "pnpm run lint --filter=docs",
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "type-check": "tsc --noEmit",
+    "test:all": "turbo run test",
+    "build:test": "turbo run build test"
   },
   "devDependencies": {
     "prettier": "^3.2.5",
