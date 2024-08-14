@@ -1,0 +1,23 @@
+{
+  "name": "type-safe-array",
+  "private": true,
+  "scripts": {
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "dev:docs": "turbo run dev --filter=docs",
+    "build:docs": "turbo run build --filter=docs",
+    "start:docs": "turbo run start --filter=docs",
+    "lint:docs": "turbo run lint --filter=docs"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "turbo": "^2.0.12",
+    "typescript": "^5.4.5"
+  },
+  "packageManager": "pnpm@8.15.6",
+  "engines": {
+    "node": ">=18"
+  }
+}
