@@ -1,7 +1,6 @@
 {
   "name": "type-safe-array",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "dev": "turbo run dev",
