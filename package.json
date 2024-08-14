@@ -1,5 +1,5 @@
 {
-  "name": "type-safe-array",
+  "name": "@chapdo/type-safe-array",
   "version": "0.1.0",
   "scripts": {
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
