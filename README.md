@@ -1,81 +1,49 @@
-# Turborepo starter
+# TypeSafeArray
 
-This is an official starter Turborepo.
+TypeSafeArray는 TypeScript에서 배열 조작을 위한 타입 안전한 유틸리티 라이브러리입니다.
 
-## Using this example
+## 특징
 
-Run the following command:
+- 완전한 타입 안전성
+- 읽기 전용 배열 지원
+- 표준 Array 메서드와 유사한 API
 
-```sh
-npx create-turbo@latest
+## 설치
+
+```bash
+npm install type-safe-array
 ```
 
-## What's inside?
+또는
 
-This Turborepo includes the following packages/apps:
-
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm build
+```bash
+yarn add type-safe-array
 ```
 
-### Develop
+## 사용법
 
-To develop all apps and packages, run the following command:
+```typescript
+import { TypeSafeArray } from 'type-safe-array';
 
-```
-cd my-turborepo
-pnpm dev
-```
+const numbers = [1, 2, 3, 4, 5] as const;
 
-### Remote Caching
+// map 예제
+const doubled = TypeSafeArray.map(numbers, (x) => x * 2);
+console.log(doubled); // [2, 4, 6, 8, 10]
 
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+// filter 예제
+const evenNumbers = TypeSafeArray.filter(numbers, (x) => x % 2 === 0);
+console.log(evenNumbers); // [2, 4]
 
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
+// reduce 예제
+const sum = TypeSafeArray.reduce(numbers, (acc, curr) => acc + curr, 0);
+console.log(sum); // 15
 ```
 
-## Useful Links
+## 공식문서
 
-Learn more about the power of Turborepo:
+자세한 API 문서는 [여기](링크)에서 확인할 수 있습니다.
 
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+## 라이선스
+
+이 프로젝트는 [MIT 라이선스](LICENSE) 하에 있습니다.
