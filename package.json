@@ -6,6 +6,7 @@
     "dev": "turbo run dev",
     "build": "turbo run build",
     "lint": "turbo run lint",
+    "lint:fix": "turbo run lint:fix",
     "dev:docs": "turbo run dev --filter=docs",
     "build:docs": "turbo run build --filter=docs",
     "start:docs": "turbo run start --filter=docs",
@@ -19,5 +20,14 @@
   "packageManager": "pnpm@8.15.6",
   "engines": {
     "node": ">=18"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@babel/*",
+        "eslint",
+        "typescript"
+      ]
+    }
   }
 }
