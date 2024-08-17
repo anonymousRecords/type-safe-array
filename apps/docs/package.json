@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "pnpm dev",
+    "build": "pnpm build",
+    "start": "pnpm start",
+    "lint": "pnpm lint"
   },
   "dependencies": {
     "@react-three/drei": "9.109.5",
