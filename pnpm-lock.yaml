@@ -23,15 +23,15 @@ importers:
 
   apps/docs:
     dependencies:
+      '@chapdo/type-safe-array':
+        specifier: workspace:*
+        version: link:../../packages/core
       '@react-three/drei':
         specifier: 9.109.5
         version: 9.109.5(@react-three/fiber@8.17.5)(@types/react@18.2.61)(@types/three@0.167.1)(react-dom@18.3.1)(react@18.2.0)(three@0.167.1)
       '@react-three/fiber':
         specifier: 8.17.5
         version: 8.17.5(react-dom@18.3.1)(react@18.2.0)(three@0.167.1)
-      '@type-safe-array/core':
-        specifier: workspace:*
-        version: link:../../packages/core
       next:
         specifier: 14.2.5
         version: 14.2.5(react-dom@18.3.1)(react@18.2.0)

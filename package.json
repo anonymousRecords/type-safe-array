@@ -1,5 +1,5 @@
 {
-  "name": "@chapdo/type-safe-array",
+  "name": "type-safe-array",
   "version": "0.1.0",
   "scripts": {
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
@@ -16,7 +16,8 @@
     "test:coverage": "vitest run --coverage",
     "type-check": "tsc --noEmit",
     "test:all": "turbo run test",
-    "build:test": "turbo run build test"
+    "build:test": "turbo run build test",
+    "publish-packages": "turbo run build lint test && changeset version && changeset publish"
   },
   "devDependencies": {
     "@changesets/cli": "2.27.7",
