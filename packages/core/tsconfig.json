@@ -5,6 +5,7 @@
     "lib": ["es2018", "dom"],
     "declaration": true,
     "outDir": "./dist",
+    "moduleResolution": "node",
     "strict": true,
     "esModuleInterop": true
   },

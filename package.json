@@ -19,6 +19,7 @@
     "build:test": "turbo run build test"
   },
   "devDependencies": {
+    "@changesets/cli": "2.27.7",
     "prettier": "^3.2.5",
     "turbo": "^2.0.12",
     "typescript": "^5.4.5"
