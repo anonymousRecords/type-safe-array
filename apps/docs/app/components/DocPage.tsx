@@ -1,4 +1,6 @@
+'use client';
 import React from 'react';
+import ScrollToTopButton from './ScrollToTopButton';
 
 type MethodProps = {
   name: string;
@@ -60,7 +62,7 @@ const TableOfContents: React.FC<{ methods: string[] }> = ({ methods }) => (
 
 const DocsPage: React.FC<{ methods: MethodProps[] }> = ({ methods }) => {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 relative">
       <h1 className="text-4xl font-bold mb-6">TypeSafeArray API Documentation</h1>
       <p className="mb-8 text-lg">
         TypeSafeArray is a type-safe utility library for array manipulation in TypeScript. This
@@ -72,6 +74,22 @@ const DocsPage: React.FC<{ methods: MethodProps[] }> = ({ methods }) => {
       {methods.map((method, index) => (
         <Method key={index} {...method} />
       ))}
+      <ScrollToTopButton onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth="1.5"
+          stroke="currentColor"
+          className="size-6"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18"
+          />
+        </svg>
+      </ScrollToTopButton>
     </div>
   );
 };
