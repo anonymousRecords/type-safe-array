@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tsup src/index.ts --minify --dts --format cjs,esm --out-dir dist",
     "lint": "eslint . --ext .ts,.tsx",
-    "lint:fix": "eslint . --ext .ts,.tsx --fix"
+    "lint:fix": "eslint . --ext .ts,.tsx --fix",
+    "test": "vitest"
   },
   "exports": {
     "types": "./dist/index.d.ts",

@@ -16,6 +16,8 @@
       "cache": false,
       "persistent": true
     },
-    "test": {}
+    "test": {
+      "outputs": []
+    }
   }
 }
