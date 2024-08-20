@@ -9,9 +9,7 @@ export default function Home() {
       <p className="text-lg text-gray-700">
         TypeSafeArray is a type-safe utility library for array manipulation in TypeScript.
       </p>
-      <div style={{ width: '100vw', height: '100vh' }}>
-        <TypeSafeArray3D />
-      </div>
+      <TypeSafeArray3D />
     </div>
   );
 }
